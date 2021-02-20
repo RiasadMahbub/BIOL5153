@@ -7,6 +7,21 @@ Graduate Student, Environmental Dynamics | 2021 - Present
 **North South University**  
 BS in Environmental Science | 2015 - 2018
 
+### **TECHINICAL SKILLS:**
+* Programming 
+    - Python
+    - R
+    - Julia
+    - Google earth engine (Java)
+* Software
+    - Microsoft office
+    - ArcGIS
+    - QGIS
+    - SPSS
+* Operating system
+    - Linux
+    - MacOS
+    - Windows
 
 ### **RESEARCH EXPERIENCE:**
 
