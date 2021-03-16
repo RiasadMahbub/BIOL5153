@@ -1,2 +1,19 @@
 # BIOL5153
-assn03 consists of some blastn (blast/2.3.0+) searches to search watermelon nad4L nucleotide sequences.
+- #### CV1.md
+CV1.md is my resume generated using R package pagedown. <br>
+
+- #### CV2.md
+CV2.md is my resume using R markdown. <br>
+
+- #### assn03
+assn03 consists of some blastn (blast/2.3.0+) searches to search watermelon nad4L nucleotide sequences. <br>
+
+- #### write_razor_pbs.py
+write_razor_pbs.py is a PBS python script to run in the razor cluster of AHPCC <br>
+
+- #### write_pinnacle_slurm.py
+write_pinnacle_slurm.py is a slurm python script to run in the pinnacle cluster of AHPCC <br>
+- ###  Screenshot
+screen shot that shows thepwdand script commands, followed by the output of the script.
+![](image.png)
+
