@@ -15,7 +15,7 @@ write_razor_pbs.py is a PBS python script to run in the razor cluster of AHPCC <
 write_pinnacle_slurm.py is a slurm python script to run in the pinnacle cluster of AHPCC <br>
 - ###  Screenshot
 screen shot that shows thepwdand script commands, followed by the output of the script.
-![](image.png)
+![](image.PNG)
 
 
 ### dna.txt
