@@ -18,8 +18,8 @@ screen shot that shows thepwdand script commands, followed by the output of the 
 ![](image.PNG)
 
 
-### dna.txt
+- ### dna.txt
 dna.txt contains the DNA sequence of nad4L
 
-### nucleotide_composition.py
+- ### nucleotide_composition.py
 a python script that estimates the frequency of the Adenine,Thymine, Guanine and Cytosine  of the file dna.txt. 
