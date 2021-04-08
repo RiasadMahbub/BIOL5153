@@ -23,3 +23,6 @@ dna.txt contains the DNA sequence of nad4L
 
 - ### nucleotide_composition.py
 a python script that estimates the frequency of the Adenine,Thymine, Guanine and Cytosine  of the file dna.txt. 
+
+- ### parseGFF.py
+Assignment 6. Using csv, argparse and biopython packages parsing a GFF file and slicing and extracting the sequence from the genome.
