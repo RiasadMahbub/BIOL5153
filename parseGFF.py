@@ -32,9 +32,14 @@ with open(args.gff, 'r') as gff_in:
 
     #loop over all the lines in our reader object (i.e., parsed file)
     for line in reader:
-        start =line[3]
+        start = line[3]
         end = line[4]
         strand = line[6]
 
         # extract the sequence
-        print(len(genome.seq))
+        print(">", genome.id, line[-1])
+        if strand == "+":
+            print(genome.seq[int(start)-1:int(end)]) #Print Fasta header
+        else:
+            print(genome.seq[int(start)-1:int(end)]).reverse_complement() #print the reverse counnterpart of the sequence
+            
