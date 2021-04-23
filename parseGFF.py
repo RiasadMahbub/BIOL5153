@@ -5,7 +5,7 @@ import csv
 import argparse
 from Bio import SeqIO
 import re
-
+from collections import defaultdict 
 
 # inputs: 1) GFF file, 2) corresponding genome sequence (FASTA format)
 
@@ -15,6 +15,8 @@ parser = argparse.ArgumentParser(description= 'To determine how genes with exons
 # add positional arguments
 parser.add_argument("gff", help = 'name of the GFF file')
 parser.add_argument("fasta", help = 'name of the FASTA file')
+parser.add_argument("gene_name", help = "name of the gene to extract")
+parser.add_argument("feature_type", help = 'type of feature to extract')
 
 # parse the arguments
 args = parser.parse_args()
@@ -23,6 +25,7 @@ args = parser.parse_args()
 genome = SeqIO.read(args.fasta, 'fasta')
 print(genome.id)
 print(genome.seq)
+
 
 # Add a function calledrev_compto yourparseGFF.pyscript that will calculate and return the reversecomplement of features that are on the ‘-’ strand. 
 def rev_comp(genome_seq, strand):
@@ -39,6 +42,23 @@ with open(args.gff, 'r') as gff_in:
 
     #loop over all the lines in our reader object (i.e., parsed file)
     for line in reader:
-        start = line[3]
-        end = line[4]
-        strand = line[6]
+        #skip comment line
+        if(not line):
+            continue
+        #skip blank lines
+        elif(re.search('^#', line[0])):
+            continue
+
+        # else its a data line    
+        else :
+            feature = line[2]
+            species = line[0] 
+            start = line[3]
+            end = line[4]
+            strand = line[6] 
+            attributes = line[8] 
+            exon = re.search(r"exon(\d)", attributes) 
+
+            if (feature_type == args.feature_type_arg):
+            
+        
