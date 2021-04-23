@@ -4,12 +4,13 @@
 import csv
 import argparse
 from Bio import SeqIO
+import re
 
 
 # inputs: 1) GFF file, 2) corresponding genome sequence (FASTA format)
 
 #create an argument parser object
-parser = argparse.ArgumentParser(description= 'This script will parse a GFF file and extract each feature from the genome')
+parser = argparse.ArgumentParser(description= 'To determine how genes with exons and introns are encoded.')
 
 # add positional arguments
 parser.add_argument("gff", help = 'name of the GFF file')
@@ -23,6 +24,12 @@ genome = SeqIO.read(args.fasta, 'fasta')
 print(genome.id)
 print(genome.seq)
 
+# Add a function calledrev_compto yourparseGFF.pyscript that will calculate and return the reversecomplement of features that are on the ‘-’ strand. 
+def rev_comp(genome_seq, strand):
+	if strand == '-':
+		return(print(genome_seq).reverse_complement()
+	else:
+		return(print(genome_seq))
 
 #open and read in GFF file
 with open(args.gff, 'r') as gff_in:
@@ -35,11 +42,3 @@ with open(args.gff, 'r') as gff_in:
         start = line[3]
         end = line[4]
         strand = line[6]
-
-        # extract the sequence
-        print(">", genome.id, line[-1])
-        if strand == "+":
-            print(genome.seq[int(start)-1:int(end)]) #Print Fasta header
-        else:
-            print(genome.seq[int(start)-1:int(end)]).reverse_complement() #print the reverse counnterpart of the sequence
-            
