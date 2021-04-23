@@ -26,3 +26,4 @@ a python script that estimates the frequency of the Adenine,Thymine, Guanine and
 
 - ### parseGFF.py
 Assignment 6. Using csv, argparse and biopython packages parsing a GFF file and slicing and extracting the sequence from the genome.
+Assignment 7. rev_comp function added that calculates reverse complement of the features that are on '-' strand. Building a coding sequence (CDS) for each gene, which consists of all the exons properly sliced together. 
